@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -15,9 +15,14 @@ export default function Footer() {
 
       <p className="text-xs mt-1">
         <span className="font-semibold">Project Repo:</span>{" "}
-        <Link href="https://github.com/fabiangamboa95/portfolio-app">
+        <a
+          href="https://github.com/fabiangamboa95/portfolio-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           https://github.com/fabiangamboa95/portfolio-app
-        </Link>
+        </a>
+        <FaExternalLinkAlt className="inline" />
       </p>
     </footer>
   );
