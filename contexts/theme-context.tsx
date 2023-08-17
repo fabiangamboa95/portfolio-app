@@ -39,9 +39,17 @@ export default function ThemeContextProvider({
       setTheme(localTheme);
 
       if (localTheme === "dark") {
+        // recover prev theme
         document.documentElement.classList.add("dark");
       }
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    }
+    // else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    //   // this is use user's preference
+    //   setTheme("dark");
+    //   document.documentElement.classList.add("dark");
+    // }
+    else {
+      // using dark theme by default
       setTheme("dark");
       document.documentElement.classList.add("dark");
     }
